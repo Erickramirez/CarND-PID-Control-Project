@@ -14,7 +14,7 @@ This is the formula to get the control, in this case the steering of the car:
 
 * Kp (Proportional) it is an amplifier for the current “cross track error” (CTE), it means that if the current error is large and positive, the control output also will be large and positive.
 * Ki (Integral), it is for the past values (sum of them). It is useful when the current CTE, is not sufficiently strong. This will respond to an accumulate over the time, normally this will be useful when we need to push the control in the opposite direction of the accumulated CTE.
-* Kd (Derivative) it is based on the current rate of change (current CTE – previous CTE). It is useful when to know the possible trend of error. For instance: if in a step we have a positive CTE, the next step the CTE is almost 0, then possible we will have a negative CTE for the next (future) step.
+* Kd (Derivative) it is based on the current rate of change (current CTE – previous CTE). It is useful when we want to know the possible trend of error. For instance: if in a step we have a positive CTE, the next step the CTE is almost 0, then possible we will have a negative CTE for the next (future) step. 
 
 The gains that I used were manually tuned and set as, Kp = 0.2, Ki = 0.0001 and Kd = 5. The throttle was set to 0.3 (value provided). This is the result of the the implementation:
 * [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/LAzlXLq_Hcw/0.jpg)](https://www.youtube.com/watch?v=LAzlXLq_Hcw)
